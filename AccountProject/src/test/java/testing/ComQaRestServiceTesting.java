@@ -1,6 +1,7 @@
 package testing;
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -8,10 +9,18 @@ import com.qa.rest.Account;
 import com.qa.rest.Service;
 
 public class ComQaRestServiceTesting {
-	Account person1 = new Account("Ahmed", "Abidali", 123);
-	Account person2 = new Account("Oussama", "Mlouk", 141);
-	Account person3 = new Account("Ahmed", "asdfgsdf", 2398147);
-	Service service = new Service();
+	private Account person1;
+	private Account person2;
+	private Account person3;
+	private Service service;
+	
+	@Before
+	public void setup() {
+		person1 = new Account("Ahmed", "Abidali", "123");
+		person2 = new Account("Oussama", "Mlouk", "141");
+		person3 = new Account("Ahmed", "asdfgsdf", "2398147");
+		service = new Service();
+	}
 	
 	@Ignore
 	@Test
@@ -22,7 +31,7 @@ public class ComQaRestServiceTesting {
 	@Test
 	public void addingAccount() {
 		service.addAccountMap(person1);
-		assertEquals(service.getAccountMap(0), person1);
+		assertEquals(1, service.getTheWholeAccountMap().size());
 	}
 	
 	@Test

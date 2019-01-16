@@ -15,8 +15,8 @@ public class App {
 //		String accountperson1 = gson.toJson(service.getAccountMap(1));
 //		System.out.println(accountperson1);
 
-		Account person1 = new Account("Ahmed", "Abidali", 123);
-		Account person2 = new Account("oasuid", "asdf", 123445);
+		Account person1 = new Account("Ahmed", "Abidali", "123");
+		Account person2 = new Account("oasuid", "asdf", "123445");
 		
 		Service service = new Service();
 		
