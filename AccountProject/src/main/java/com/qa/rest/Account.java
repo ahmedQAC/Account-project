@@ -3,9 +3,9 @@ package com.qa.rest;
 public class Account {
 	private String firstName;
 	private String lastName;
-	private int accountNumber;
+	private String accountNumber;
 	
-	public Account(String firstName, String lastName, int accountNumber) {
+	public Account(String firstName, String lastName, String accountNumber) {
 		this.firstName=firstName;
 		this.lastName=lastName;
 		this.accountNumber=accountNumber;
@@ -27,11 +27,11 @@ public class Account {
 		this.lastName = lastName;
 	}
 
-	public int getAccountNumber() {
+	public String getAccountNumber() {
 		return accountNumber;
 	}
 
-	public void setAccountNumber(int accountNumber) {
+	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
 	}
 	
