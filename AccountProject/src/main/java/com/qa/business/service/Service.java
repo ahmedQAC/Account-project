@@ -1,6 +1,8 @@
-package com.qa.rest;
+package com.qa.business.service;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.qa.persistence.domain.Account;
 
 public class Service {
 	private int id = 0;

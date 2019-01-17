@@ -5,8 +5,8 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.qa.rest.Account;
-import com.qa.rest.Service;
+import com.qa.business.service.Service;
+import com.qa.persistence.domain.Account;
 
 public class ComQaRestServiceTesting {
 	private Account person1;

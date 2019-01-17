@@ -1,5 +1,8 @@
 package com.qa.rest;
-import com.google.gson.Gson;
+import com.qa.business.service.Service;
+//import com.google.gson.Gson;
+import com.qa.persistence.domain.Account;
+import com.qa.util.*;
 
 public class App {
 	public static void main(String[] args) {
@@ -22,9 +25,15 @@ public class App {
 		
 		service.addAccountMap(person1);
 		service.addAccountMap(person2);
-		Gson gson =new Gson();
 		
-		System.out.println(gson.toJson(service.getAccountMap(1)));
+		JSONUtil gson = new JSONUtil();
+		
+		System.out.println(gson.getJSONForObject(person1));
+		
+		//Old way of converting to Gson
+//		Gson gson =new Gson();
+//		
+//		System.out.println(gson.toJson(service.getAccountMap(1)));
 	}
 	
 }
